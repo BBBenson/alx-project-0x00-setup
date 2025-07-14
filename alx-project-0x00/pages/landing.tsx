@@ -7,17 +7,18 @@ const Landing: React.FC = () => {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-xl font-extralight mb-8">Landing Page</h1>
 
-    
+      {/* Property Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         <Card />
         <Card />
         <Card />
       </div>
 
+      {/* Button Variants Demo */}
       <div className="space-y-8">
         <h2 className="text-2xl font-semibold">Button Components</h2>
 
-
+        {/* Small Buttons */}
         <div className="space-y-4">
           <h3 className="text-lg font-medium">Small Buttons</h3>
           <div className="flex flex-wrap gap-4">
@@ -27,6 +28,7 @@ const Landing: React.FC = () => {
           </div>
         </div>
 
+        {/* Medium Buttons */}
         <div className="space-y-4">
           <h3 className="text-lg font-medium">Medium Buttons</h3>
           <div className="flex flex-wrap gap-4">
@@ -36,7 +38,7 @@ const Landing: React.FC = () => {
           </div>
         </div>
 
-        
+        {/* Large Buttons */}
         <div className="space-y-4">
           <h3 className="text-lg font-medium">Large Buttons</h3>
           <div className="flex flex-wrap gap-4">
