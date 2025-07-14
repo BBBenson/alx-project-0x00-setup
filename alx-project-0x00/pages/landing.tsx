@@ -44,6 +44,7 @@ const Landing: React.FC = () => {
           <div className="flex flex-wrap gap-4">
             <Button title="Large Rounded SM" size="large" shape="rounded-sm" />
             <Button title="Large Rounded MD" size="large" shape="rounded-md" />
+            <Button title="Large Rounded LG" size="large" shape="rounded-lg" />
             <Button title="Large Rounded Full" size="large" shape="rounded-full" />
           </div>
         </div>

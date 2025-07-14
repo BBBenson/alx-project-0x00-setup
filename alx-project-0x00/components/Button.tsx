@@ -1,12 +1,7 @@
 import type React from "react"
-// Define ButtonProps locally if not exported from "@/interfaces"
-export interface ButtonProps {
-  title: string;
-  size?: "small" | "medium" | "large";
-  shape?: "rounded-sm" | "rounded-md" | "rounded-full";
-}
+import type { ButtonProps } from "@/interfaces"
 
-const Button: React.FC<ButtonProps> = ({ title, size = "medium", shape = "rounded-md" }) => {
+const Button: React.FC<ButtonProps> = ({ title, size = "medium", shape = "rounded-md", styles = "" }) => {
   // Size classes
   const sizeClasses = {
     small: "px-3 py-1 text-sm",
@@ -18,13 +13,14 @@ const Button: React.FC<ButtonProps> = ({ title, size = "medium", shape = "rounde
   const shapeClasses = {
     "rounded-sm": "rounded-sm",
     "rounded-md": "rounded-md",
+    "rounded-lg": "rounded-lg",
     "rounded-full": "rounded-full",
   }
 
   const baseClasses =
     "bg-blue-500 text-white font-medium hover:bg-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
 
-  const combinedClasses = `${baseClasses} ${sizeClasses[size]} ${shapeClasses[shape]}`
+  const combinedClasses = `${baseClasses} ${sizeClasses[size]} ${shapeClasses[shape]} ${styles}`
 
   return <button className={combinedClasses}>{title}</button>
 }
